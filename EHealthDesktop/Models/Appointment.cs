@@ -1,0 +1,16 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EHealthDesktop.Models
+{
+    public class Appointment
+    {
+        public int Id { get; set; }
+        public int PatientId { get; set; }
+        public Patient Patient { get; set; } = null!;
+        public int DoctorId { get; set; }
+        public Doctor Doctor { get; set; } = null!;
+        public DateTime Date { get; set; }
+        public string Status { get; set; } = "Scheduled";
+    }
+}

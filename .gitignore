@@ -1,4 +1,3 @@
-# Build results
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -13,8 +12,6 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
-
-# Visual Studio / IDE
 .vs/
 *.user
 *.suo
@@ -22,13 +19,21 @@ bld/
 *.sln.docstates
 .vscode/
 
-# Ignore generated outputs
 EHealthPlatform/bin/
 EHealthPlatform/obj/
-**/bin/
-**/obj/
-
-# xUnit specific ignores
 EHealthPlatform.Tests/bin/
 EHealthPlatform.Tests/obj/
+EHealthDesktop/bin/
+EHealthDesktop/obj/
+EHealthDesktop.Tests/bin/
+EHealthDesktop.Tests/obj/
+test_wpf/bin/
+test_wpf/obj/
+**/bin/
+**/obj/
+EHealthPlatform/ehealth.db
 EHealthPlatform/wwwroot/lib/
+EHealthAvalonia/bin/
+EHealthAvalonia/obj/
+EHealthAvalonia.Tests/bin/
+EHealthAvalonia.Tests/obj/

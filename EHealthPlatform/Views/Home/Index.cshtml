@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4">Welcome to E-Health Platform</h1>
+    <p class="lead">A unified national health system connecting patients, doctors, and clinics.</p>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">For Patients</h5>
+                    <p class="card-text">Access your medical history, prescriptions, and book appointments easily.</p>
+                    <a asp-controller="Patient" asp-action="Dashboard" class="btn btn-primary">Patient Portal</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">For Doctors</h5>
+                    <p class="card-text">Manage patient records, diagnose, and prescribe treatments.</p>
+                    <a asp-controller="Doctor" asp-action="Dashboard" class="btn btn-success">Doctor Portal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

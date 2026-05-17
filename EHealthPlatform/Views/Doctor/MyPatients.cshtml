@@ -1,0 +1,42 @@
+@model IEnumerable<EHealthPlatform.Models.Patient>
+@{
+    ViewData["Title"] = "My Patients";
+}
+
+<h2>My Patients</h2>
+<hr />
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Patient Name</th>
+                <th>Birth Date</th>
+                <th>Insurance Policy</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach(var p in Model)
+                {
+                    <tr>
+                        <td>@p.User?.FullName</td>
+                        <td>@p.BirthDate.ToShortDateString()</td>
+                        <td>@p.InsurancePolicy</td>
+                        <td>
+                            <a asp-action="AddRecord" asp-route-patientId="@p.Id" class="btn btn-sm btn-primary">Add Record</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="4" class="text-center">No patients found.</td></tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a asp-action="Dashboard" class="btn btn-secondary">Back to Dashboard</a>

@@ -1,0 +1,16 @@
+Using launch settings from /app/EHealthPlatform/Properties/launchSettings.json...
+Building...
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {f9950d4e-0025-48b5-a550-f0a136f7b014} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5042
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /app/EHealthPlatform
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...

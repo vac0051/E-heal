@@ -1,0 +1,31 @@
+@model EHealthPlatform.Models.Patient
+@{
+    ViewData["Title"] = "Add Medical Record";
+}
+
+<h2>Add Medical Record for @Model?.User?.FullName</h2>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="SaveRecord" method="post">
+            <input type="hidden" name="patientId" value="@Model?.Id" />
+
+            <div class="mb-3">
+                <label class="form-label">Diagnosis</label>
+                <input type="text" name="diagnosis" class="form-control" placeholder="Enter diagnosis..." required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Treatment Plan</label>
+                <textarea name="treatment" class="form-control" rows="3" placeholder="Enter treatment..."></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Prescription (Optional)</label>
+                <input type="text" name="medication" class="form-control mb-2" placeholder="Medication Name" />
+                <input type="text" name="dosage" class="form-control" placeholder="Dosage" />
+            </div>
+            <button type="submit" class="btn btn-success">Save Record</button>
+            <a asp-action="Dashboard" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

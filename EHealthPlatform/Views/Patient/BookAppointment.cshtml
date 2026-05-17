@@ -1,0 +1,36 @@
+@model IEnumerable<EHealthPlatform.Models.Doctor>
+@{
+    ViewData["Title"] = "Book Appointment";
+}
+
+<h2>Available Doctors</h2>
+<hr />
+
+<div class="row">
+    @if (Model != null && Model.Any())
+    {
+        foreach (var doc in Model)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. @doc.User?.FullName</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@doc.Specialty</h6>
+                        <form asp-action="BookAppointmentPost" method="post">
+                            <input type="hidden" name="doctorId" value="@doc.Id" />
+                            <button type="submit" class="btn btn-primary btn-sm">Book Slot</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="col-12">
+            <div class="alert alert-warning">No doctors currently available.</div>
+        </div>
+    }
+</div>
+
+<a asp-action="Dashboard" class="btn btn-secondary mt-3">Back to Dashboard</a>
